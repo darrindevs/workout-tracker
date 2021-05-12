@@ -12,8 +12,18 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3",
-    "mongoose": "^5.3.16",
-    "morgan": "^1.9.1"
-  }
+    "express": "^4.17.1",
+    "mongodb": "^3.6.6",
+    "mongoose": "^5.12.8",
+    "morgan": "^1.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darrindevs/workout-tracker.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/darrindevs/workout-tracker/issues"
+  },
+  "homepage": "https://github.com/darrindevs/workout-tracker#readme"
 }
