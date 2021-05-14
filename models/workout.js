@@ -1,10 +1,11 @@
+//✅
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const workoutSchema = new Schema({
     day: {
         type: Date,
-        default: () => Date.now
+        default: Date.now
     },
     exercises: [{
         type: {
@@ -39,9 +40,6 @@ const workoutSchema = new Schema({
     
 });
 
-//todo figure out how to get the combined 
-//? is this where we need to do that?
-//todo  Look into using a MongoDB aggregate function to dynamically add up and return the total duration for each workout. Check out the MongoDB documentation on the $addFields, the MongoDB documentation on the $sum operator, and the Mongoose documentation on aggregate functions to learn how it can be accomplished.
 
 const Workout = mongoose.model("Workout", workoutSchema);
 

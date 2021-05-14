@@ -1,4 +1,4 @@
-//todocreate Mongo database with a Mongoose schema and handle routes with Express
+//create Mongo database with a Mongoose schema and handle routes with Express
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
@@ -17,14 +17,12 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // set up Mongoose 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workouttracker", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { useNewUrlParser: true });
 
-//todo create the models 
-const db = require("./models");
 
 //todo create the routes 
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
+require("./routes/api.js");
+require("./routes/html.js");
 
 app.listen(PORT, () => {
     console.log(`App running on port ${PORT}!`);
