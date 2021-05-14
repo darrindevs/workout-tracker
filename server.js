@@ -4,7 +4,7 @@ const logger = require("morgan");
 const mongoose = require("mongoose");
 
 //set up our environmental port and local port 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 27017;
 
 // set up express 
 const app = express();

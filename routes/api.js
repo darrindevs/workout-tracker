@@ -37,7 +37,19 @@ router.put("/api/workouts/:id", (req, res) => {
     });
 });
 
-//todo get the dashboard to work using /api/workouts/range
+//get the dashboard using /api/workouts/range
+router.get("/api/workouts/range", (req, res) => {
+
+  Workout.find({}).then(dbWorkout => {
+      console.log("ALL WORKOUTS");
+      console.log(dbWorkout);
+
+      res.json(dbWorkout);
+  }).catch(err => {
+      res.json(err);
+  });
+
+});
 
 
 
